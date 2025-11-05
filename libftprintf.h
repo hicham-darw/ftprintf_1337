@@ -6,15 +6,16 @@
 /*   By: hel-hamo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/28 15:56:49 by hel-hamo          #+#    #+#             */
-/*   Updated: 2025/11/04 00:01:51 by hel-hamo         ###   ########.fr       */
+/*   Updated: 2025/11/05 19:17:15 by hel-hamo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFTPRINTF_H
 # define LIBFTPRINTF_H
 
-# include "libft.h"
 # include <stdarg.h>
+# include <stdlib.h>
+# include <unistd.h>
 
 int		get_len_printf(const char *s, va_list list);
 char	*ft_decimal_cat(char *str, int nbr);
@@ -28,5 +29,9 @@ char	*printf_not_completed(char *s);
 char	*ft_uitoa(unsigned int n);
 int		len_hexa(unsigned int nbr);
 char	*ft_get_string(char *str, const char *frmt, va_list args);
+void	*ft_memset(void *s, int c, size_t n);
+char	*ft_itoa(int n);
+char	*ft_strcat(char *dest, char *src);
+size_t	ft_strlen(const char *s);
 
 #endif
