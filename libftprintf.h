@@ -6,7 +6,7 @@
 /*   By: hel-hamo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/28 15:56:49 by hel-hamo          #+#    #+#             */
-/*   Updated: 2025/11/05 19:17:15 by hel-hamo         ###   ########.fr       */
+/*   Updated: 2025/11/05 22:09:32 by hel-hamo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,6 @@ int		len_hexa(unsigned int nbr);
 char	*ft_get_string(char *str, const char *frmt, va_list args);
 void	*ft_memset(void *s, int c, size_t n);
 char	*ft_itoa(int n);
-char	*ft_strcat(char *dest, char *src);
 size_t	ft_strlen(const char *s);
 
 #endif
