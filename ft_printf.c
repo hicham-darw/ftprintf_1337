@@ -6,12 +6,11 @@
 /*   By: hel-hamo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/24 16:18:02 by hel-hamo          #+#    #+#             */
-/*   Updated: 2025/11/06 01:43:30 by hel-hamo         ###   ########.fr       */
+/*   Updated: 2025/11/06 10:53:15 by hel-hamo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libftprintf.h"
-#include <stdio.h>
 
 int	ft_printf(const char *s, ...)
 {

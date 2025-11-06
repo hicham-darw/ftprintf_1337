@@ -6,7 +6,7 @@
 /*   By: hel-hamo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/27 10:51:32 by hel-hamo          #+#    #+#             */
-/*   Updated: 2025/10/29 02:35:32 by hel-hamo         ###   ########.fr       */
+/*   Updated: 2025/11/06 10:53:03 by hel-hamo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,6 +52,7 @@ char	*ft_address_cat(char *dest, void *addr)
 	ptr = (char *)malloc(sizeof(char) * (len_nbr + 1 + 2));
 	if (!ptr)
 		return (NULL);
+	ft_memset(ptr, 0, len_nbr + 1 + 2);
 	ft_strcat(ptr, "0x");
 	return (get_address(dest, ptr, nbr, len_nbr + 2));
 }
