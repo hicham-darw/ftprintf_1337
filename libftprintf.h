@@ -6,7 +6,7 @@
 /*   By: hel-hamo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/28 15:56:49 by hel-hamo          #+#    #+#             */
-/*   Updated: 2025/11/05 22:09:32 by hel-hamo         ###   ########.fr       */
+/*   Updated: 2025/11/06 05:07:21 by hel-hamo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ char	*ft_hexadecimal_cat(char *str, unsigned int nbr, char c);
 char	*ft_strcat(char *dest, char *src);
 char	*ft_charcat(char *str, char c);
 char	*ft_address_cat(char *string, void *adress);
-char	*ft_onlyformat_cat(char *string, char c);
+char	*ft_onlyformat_cat(char *string);
 int		ft_printf(const char *s, ...);
 char	*printf_not_completed(char *s);
 char	*ft_uitoa(unsigned int n);

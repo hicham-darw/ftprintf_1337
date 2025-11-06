@@ -6,7 +6,7 @@
 /*   By: hel-hamo <hel-hamo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/13 16:18:35 by hel-hamo          #+#    #+#             */
-/*   Updated: 2025/11/05 19:24:39 by hel-hamo         ###   ########.fr       */
+/*   Updated: 2025/11/06 05:01:16 by hel-hamo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ size_t	ft_strlen(const char *s)
 {
 	size_t	i;
 
+	if (!s)
+		return (6);
 	i = 0;
 	while (s[i])
 		i++;
