@@ -6,7 +6,7 @@
 /*   By: hel-hamo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/29 00:57:17 by hel-hamo          #+#    #+#             */
-/*   Updated: 2025/11/06 04:20:52 by hel-hamo         ###   ########.fr       */
+/*   Updated: 2025/11/06 05:09:47 by hel-hamo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@ char	*ft_get_string(char *str, const char *fm, va_list args)
 			else if (!*fm)
 				return (printf_not_completed(str));
 			else
-				ft_onlyformat_cat(str);
+				ft_charcat(str, *(fm));
 		}
 		else
 			ft_charcat(str, *(fm));
