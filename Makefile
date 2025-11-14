@@ -1,15 +1,10 @@
 CC = cc
-
-CFLAGS = -Wall -Wextra -Werror
-
+CFLAGS = -Wall -Werror -Wextra
 NAME = libftprintf.a
-
 HEADER = libftprintf.h
-
-SRCS = ft_address_cat.c ft_memset.c ft_strlen.c ft_itoa.c ft_charcat.c ft_decimal_cat.c ft_get_string.c ft_hexadecimal_cat.c \
-       ft_printf.c ft_strcat.c ft_uitoa.c get_len_printf.c printf_not_completed.c len_hexa.c
-
+SRCS = ft_printf.c print_address.c print_arg_int.c print_arg_unsigned.c print_string.c
 OBJS = $(SRCS:.c=.o)
+
 
 all: $(NAME)
 
@@ -19,7 +14,7 @@ $(NAME): $(OBJS)
 	$(CC) $(CFLAGS) -c $< -o $@
 	ar rcs $(NAME) $@
 
-clean: 
+clean:
 	rm -f $(OBJS)
 
 fclean: clean

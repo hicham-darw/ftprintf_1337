@@ -3,33 +3,35 @@
 /*                                                        :::      ::::::::   */
 /*   libftprintf.h                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hel-hamo <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: hel-hamo <hel-hamo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/28 15:56:49 by hel-hamo          #+#    #+#             */
-/*   Updated: 2025/11/06 05:30:59 by hel-hamo         ###   ########.fr       */
+/*   Created: 2025/11/13 21:21:04 by hel-hamo          #+#    #+#             */
+/*   Updated: 2025/11/14 05:44:22 by hel-hamo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFTPRINTF_H
 # define LIBFTPRINTF_H
 
-# include <stdarg.h>
-# include <stdlib.h>
 # include <unistd.h>
+# include <stdlib.h>
+# include <stdarg.h>
 
-int		get_len_printf(const char *s, va_list list);
-char	*ft_decimal_cat(char *str, int nbr);
-char	*ft_hexadecimal_cat(char *str, unsigned int nbr, char c);
-char	*ft_strcat(char *dest, char *src);
-char	*ft_charcat(char *str, char c);
-char	*ft_address_cat(char *string, void *adress);
 int		ft_printf(const char *s, ...);
-char	*printf_not_completed(char *s);
-char	*ft_uitoa(unsigned int n);
-int		len_hexa(unsigned int nbr);
-char	*ft_get_string(char *str, const char *frmt, va_list args);
-void	*ft_memset(void *s, int c, size_t n);
-char	*ft_itoa(int n);
+int		ft_put_everything(va_list list, const char *s, int *ret);
+int		nbrlen_addr(unsigned long n);
+int		ft_put_addr(char *ptr);
+int		print_address(void *addr);
 size_t	ft_strlen(const char *s);
+int		ft_nbrlen(long nbr);
+int		ft_absolute(int nbr);
+char	*ft_ltoa(long nbr);
+int		print_arg_int(int arg, char c);
+char	*ft_strdup(const char *s);
+int		ft_nbrlen_hexa(unsigned int n);
+char	*print_hexa(char *ptr, unsigned int nbr, int len, char c);
+int		print_arg_unsigned(unsigned int nbr, char c);
+int		print_string(const char *s);
+int		print_invalid_format(char c);
 
 #endif

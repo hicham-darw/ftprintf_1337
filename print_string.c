@@ -1,28 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   print_string.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hel-hamo <hel-hamo@student.42.fr>          +#+  +:+       +#+        */
+/*   By: hel-hamo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/13 16:23:06 by hel-hamo          #+#    #+#             */
-/*   Updated: 2025/11/05 19:24:01 by hel-hamo         ###   ########.fr       */
+/*   Created: 2025/11/14 00:39:35 by hel-hamo          #+#    #+#             */
+/*   Updated: 2025/11/14 03:51:04 by hel-hamo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libftprintf.h"
 
-void	*ft_memset(void *s, int c, size_t n)
+int	print_string(const char *s)
 {
-	unsigned char	*ptr;
-	size_t			i;
+	int	i;
+	int	count;
 
-	ptr = (unsigned char *)s;
-	i = 0;
-	while (i < n)
+	if (!s)
+		return (write(1, "(null)", 6));
+	count = 0;
+	i = count;
+	while (s[i])
 	{
-		ptr[i] = (unsigned char)c;
+		count += write(1, &s[i], 1);
 		i++;
 	}
-	return (s);
+	return (count);
+}
+
+int	print_invalid_format(char c)
+{
+	write(1, "%", 1);
+	write(1, &c, 1);
+	return (2);
 }
