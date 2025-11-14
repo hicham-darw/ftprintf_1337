@@ -6,7 +6,7 @@
 /*   By: hel-hamo <hel-hamo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/13 21:22:17 by hel-hamo          #+#    #+#             */
-/*   Updated: 2025/11/14 05:44:40 by hel-hamo         ###   ########.fr       */
+/*   Updated: 2025/11/14 05:55:22 by hel-hamo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ int	ft_printf(const char *s, ...)
 	va_list	list;
 	int		ret;
 
-	if (!s)
+	if (!s || write(1, "", 0) < 0)
 		return (-1);
 	va_start(list, s);
 	ret = 0;
